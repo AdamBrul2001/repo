@@ -3,7 +3,7 @@ package Zadanie7;
 import java.io.*;
 import java.util.Scanner;
 
-public class SzyfrCezara {
+public class SzyfrCezaraPrzyklad {
     public static String cezar(String str){
         char x[] = str.toCharArray();
 
@@ -27,10 +27,10 @@ public class SzyfrCezara {
     }
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        File wejscie = new File("./src/SzyfrCezara/Dane.txt");
+        File wejscie = new File("./src/SzyfrCezaraPrzyklad/Dane.txt");
         Scanner in = new Scanner(wejscie);
-        PrintWriter wyjscie = new PrintWriter("./src/SzyfrCezara/zaszyfrowane.txt");
-        File wejscie2 = new File("./src/SzyfrCezara/zaszyfrowane.txt");
+        PrintWriter wyjscie = new PrintWriter("./src/SzyfrCezaraPrzyklad/zaszyfrowane.txt");
+        File wejscie2 = new File("./src/SzyfrCezaraPrzyklad/zaszyfrowane.txt");
         Scanner in2 = new Scanner(wejscie2);
 
         int i = 0;
@@ -48,7 +48,7 @@ public class SzyfrCezara {
 
         while (j != i){
             slowo = dane[j];
-            szyfr = SzyfrCezara.cezar(slowo);
+            szyfr = SzyfrCezaraPrzyklad.cezar(slowo);
             wyjscie.println(szyfr);
             j++;
         }
@@ -57,7 +57,7 @@ public class SzyfrCezara {
 
         while (in2.hasNextLine()) {
             String szyfrowane = in2.nextLine();
-            String odszyfrowane = SzyfrCezara.cezarwroc(szyfrowane);
+            String odszyfrowane = SzyfrCezaraPrzyklad.cezarwroc(szyfrowane);
             System.out.println(odszyfrowane);
         }
     }
