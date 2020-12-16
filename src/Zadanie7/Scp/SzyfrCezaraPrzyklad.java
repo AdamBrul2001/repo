@@ -1,4 +1,4 @@
-package Zadanie7;
+package Zadanie7.Scp;
 
 import java.io.*;
 import java.util.Scanner;
