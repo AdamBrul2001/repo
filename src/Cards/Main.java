@@ -12,5 +12,9 @@ public class Main {
         Card card = deck.draw();
         System.out.println(deck.deck.size());
         System.out.println(card);
+
+        Dice dice = new Dice(4);
+
+        System.out.println(dice.roll());
     }
 }
